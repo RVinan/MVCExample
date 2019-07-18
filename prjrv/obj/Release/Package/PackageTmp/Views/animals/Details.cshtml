@@ -1,0 +1,34 @@
+﻿@model prjrv.Models.animal
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>animal</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.especie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.especie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tipoAnimalId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipoAnimalId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.animalId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

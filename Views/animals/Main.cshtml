@@ -1,0 +1,42 @@
+﻿@model IEnumerable<prjrv.Models.animal>
+
+@{
+    
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Main</title>
+</head>
+<body>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.especie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tipoAnimalId)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.especie)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tipoAnimalId)
+                </td>
+            </tr>
+        }
+
+    </table>
+    <span># Tipo Animal: @ViewBag.Tipo</span><br />
+    <span># Especies: @ViewBag.Animal</span><br />
+    <span>Suma: @ViewBag.Suma</span>
+</body>
+</html>
